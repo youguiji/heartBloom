@@ -4,7 +4,7 @@
  * @Autor: Austral
  * @Date: 2023-02-14 19:56:53
  * @LastEditors: Austral
- * @LastEditTime: 2023-02-25 14:57:15
+ * @LastEditTime: 2023-02-28 20:05:10
  */
 import { createRouter, createWebHistory } from "vue-router";
 
@@ -14,9 +14,7 @@ const router = createRouter({
     {
       path: "/",
       name: "login",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+
       component: () => import("../views/login.vue"),
     },
   ],
