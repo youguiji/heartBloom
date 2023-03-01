@@ -3,11 +3,19 @@
     <div class="title">HeartBloom</div>
     <div class="littleTile">让心开花</div>
     <div class="loginBox">
-      <div class="tab" v-for="item in state.tab" :key="item.index">
-        <div :class="{ active: item.isActive }" class="tabItem">
-          <span>{{ item.name }}</span>
+      <div class="tabBox">
+        <div
+          class="tabItem"
+          :class="{ active: item.isActive }"
+          v-for="item in tab"
+          :key="item.index"
+          @click="changeTab(item.index)"
+        >
+          <span class="tabTitle">{{ item.name }}</span>
         </div>
       </div>
+      <div v-if="tab[0].isActive == true" class="content">密码登录box</div>
+      <div v-if="tab[1].isActive == true">验证码登录box</div>
     </div>
   </div>
 </template>
@@ -29,20 +37,19 @@ export default {
         isActive: false,
       },
     ]);
-    const state = reactive({
-      tab: [
-        {
-          index: 1,
-          name: "密码登录",
-        },
-        {
-          index: 2,
-          name: "验证码登录",
-        },
-      ],
-    });
+    const changeTab = (event) => {
+      tab.value.forEach((item) => {
+        if (item.index === event) {
+          item.isActive = true;
+        } else {
+          item.isActive = false;
+        }
+      });
+      console.log(event);
+    };
     return {
-      state,
+      tab,
+      changeTab,
     };
   },
 };
@@ -54,13 +61,13 @@ export default {
   height: 100%;
   background-color: var(--bg);
   .title {
-    font-size: 48px;
+    font-size: 36px;
     text-align: center;
     font-weight: 700;
     color: var(--themeColor);
   }
   .littleTile {
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     font-weight: 700;
     color: var(--themeColor);
@@ -69,14 +76,25 @@ export default {
     width: 700px;
     height: 500px;
     background-color: #fff;
-    margin: 10px auto;
+    margin: 0 auto ;
 
     .tabBox {
       width: 80%;
-      height: 50px;
+      height: 40px;
+      display: flex;
+      padding: 20px 0;
+      margin: 20px ;
+      .active {
+        border-bottom: 1px solid var(--deepPink);
+      }
       .tabItem {
-        width: 30%;
-        background-color: pink;
+        width: 119px;
+        height: 40px;
+        font-size: 16px;
+      }
+      .content {
+        width: 80%;
+        
       }
     }
   }
