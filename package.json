@@ -27,6 +27,7 @@
     "naive-ui": "^2.34.3",
     "prettier": "^2.7.1",
     "sass": "^1.58.3",
+    "unplugin-auto-import": "^0.15.1",
     "vite": "^4.0.0",
     "vitest": "^0.25.6"
   }

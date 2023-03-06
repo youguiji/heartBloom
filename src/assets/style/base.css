@@ -1,0 +1,31 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --themeColor: rgba(227, 34, 147, 1);
+  --deepPink: rgba(227, 57, 96, 1);
+  --line: rgba(0, 0, 0, 1);
+  --bg: rgba(229, 229, 229, 0.36);
+  --gray1: rgba(166, 166, 166, 1);
+  --gray2: rgba(0, 0, 0, 1);
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+ul {
+  outline: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-align: none;
+}
+
+button {
+  border: none;
+}/*# sourceMappingURL=base.css.map */

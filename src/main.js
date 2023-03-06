@@ -4,8 +4,8 @@ import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router";
 
-import "./assets/base.scss";
-import './assets/main.css'
+import "./assets/style/base.scss";
+import './assets/style/main.css'
 import 'remixicon/fonts/remixicon.css'
 
 const app = createApp(App);
