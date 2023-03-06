@@ -14,8 +14,23 @@
           <span class="tabTitle">{{ item.name }}</span>
         </div>
       </div>
-      <div v-if="tab[0].isActive == true" class="content">密码登录box</div>
-      <div v-if="tab[1].isActive == true">验证码登录box</div>
+      <div v-if="tab[0].isActive == true" class="content">
+        <div class="inputBox">
+          <input placeholder="请输入手机号" />
+        </div>
+        <div class="inputBox">
+          <input placeholder="请输入验证码" />
+        </div>
+        <button>登录/注册</button>
+      </div>
+      <div v-if="tab[1].isActive == true" class="content">验证码登录box</div>
+      <div class="otherMethod">
+        其他登录方式：
+        <i class="ri-wechat-2-line"></i>
+      </div>
+      <div class="socialLogin">
+        未注册手机验证后自动登录，注册即代表同意《隐私保护指引》
+      </div>
     </div>
   </div>
 </template>
@@ -28,12 +43,12 @@ export default {
     const tab = ref([
       {
         index: 1,
-        name: "密码登录",
+        name: "验证码登录",
         isActive: true,
       },
       {
         index: 2,
-        name: "验证码登录",
+        name: "密码登录",
         isActive: false,
       },
     ]);
@@ -76,26 +91,55 @@ export default {
     width: 700px;
     height: 500px;
     background-color: #fff;
-    margin: 0 auto ;
-
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     .tabBox {
-      width: 80%;
+      width: 70%;
       height: 40px;
       display: flex;
-      padding: 20px 0;
-      margin: 20px ;
+      padding: 10px 0;
+      margin: 20px auto;
       .active {
         border-bottom: 1px solid var(--deepPink);
-      }
-      .tabItem {
-        width: 119px;
-        height: 40px;
+        font-weight: 500;
         font-size: 16px;
       }
-      .content {
-        width: 80%;
-        
+      .tabItem {
+        width: 110px;
+        height: 40px;
+        font-size: 16px;
+        display: flex;
+        margin-right: 40px;
+        justify-content: center;
+        align-items: center;
       }
+    }
+    .content {
+      width: 80%;
+      .inputBox {
+        width: 100%;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--line);
+      }
+      button {
+        width: 60%;
+      }
+    }
+    .otherMethod {
+      width: 40%;
+      height: 50px;
+      font-size: 12px;
+      color:  var(--gray1);
+      border-top: 1px solid var(--bg);
+    }
+    .socialLogin {
+      font-size: 12px;
+      color: var(--bg);
     }
   }
 }
