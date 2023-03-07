@@ -84,14 +84,14 @@ export default {
     font-size: 36px;
     text-align: center;
     font-weight: 700;
-    color: var(--themeColor0);
+    color: var(--themeColor);
   }
   .littleTile {
     font-size: 20px;
     text-align: center;
     font-weight: 700;
     padding-bottom: 40px;
-    color: var(--themeColor0);
+    color: var(--themeColor);
   }
   .loginBox {
     width: 600px;
