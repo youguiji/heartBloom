@@ -14,22 +14,32 @@
           <span class="tabTitle">{{ item.name }}</span>
         </div>
       </div>
-      <div v-if="tab[0].isActive == true" class="content">
-        
-          <input placeholder="请输入手机号" />
-        
-        
-          <input placeholder="请输入验证码" />
-        
+      <div
+        v-if="tab[0].isActive == true"
+        class="content"
+      >
+
+        <input placeholder="请输入手机号" />
+
+        <input placeholder="请输入验证码" />
+        <span class="getTitle">获取短信验证码</span>
         <button>登录/注册</button>
       </div>
-      <div v-if="tab[1].isActive == true" class="content">验证码登录box</div>
+      <div
+        v-if="tab[1].isActive == true"
+        class="content"
+      >
+        <input placeholder="请输入手机号" />
+
+        <input placeholder="请输入密码" />
+        <button>登录</button>
+      </div>
       <div class="otherMethod">
         其他登录方式：
         <i class="ri-wechat-2-line"></i>
       </div>
       <div class="socialLogin">
-       
+
         未注册手机验证后自动登录，注册即代表同意《隐私保护指引》
       </div>
     </div>
@@ -127,14 +137,16 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-       input {
+      input {
         width: 100%;
         height: 50px;
         margin-bottom: 10px;
         border-bottom: 1px solid var(--line);
-       }
-       
-
+      }
+      .getTitle {
+        font-size: 12px;
+        color: var(--deepPink);
+      }
       button {
         width: 50%;
         height: 50px;
@@ -147,7 +159,7 @@ export default {
     .otherMethod {
       height: 50px;
       font-size: 14px;
-      color:  var(--gray1);
+      color: var(--gray1);
       border-top: 1px solid var(--bg);
     }
     .socialLogin {
