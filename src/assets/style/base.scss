@@ -1,11 +1,14 @@
 :root {
   --themeColor: rgba(227, 34, 147, 1);
   --deepPink: rgba(227, 57, 96, 1);
+  --sidePink: rgba(240, 108, 108, 1);
 
   --line: rgba(0, 0, 0, 1);
   --bg: rgba(229, 229, 229, 0.36);
+  --deepbg: rgba(242, 242, 242, 1);
   --gray1: rgba(166, 166, 166, 1);
   --gray2: rgba(0, 0, 0, 1);
+  --gray3: rgba(128, 128, 128, 1);
 }
 
 body {
@@ -17,6 +20,9 @@ body {
 ul {
   outline: none;
 }
+li {
+  list-style: none;
+}
 
 input {
   outline: none;
@@ -24,9 +30,10 @@ input {
 }
 a {
   text-align: none;
+  text-decoration: none;
 }
 
 button {
-  //outline: none;
+  outline: none;
   border: none;
 }

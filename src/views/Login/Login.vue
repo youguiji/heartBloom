@@ -46,38 +46,30 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { reactive, ref } from "vue";
 
-export default {
-  setup() {
-    const tab = ref([
-      {
-        index: 1,
-        name: "验证码登录",
-        isActive: true,
-      },
-      {
-        index: 2,
-        name: "密码登录",
-        isActive: false,
-      },
-    ]);
-    const changeTab = (event) => {
-      tab.value.forEach((item) => {
-        if (item.index === event) {
-          item.isActive = true;
-        } else {
-          item.isActive = false;
-        }
-      });
-      console.log(event);
-    };
-    return {
-      tab,
-      changeTab,
-    };
+const tab = ref([
+  {
+    index: 1,
+    name: "验证码登录",
+    isActive: true,
   },
+  {
+    index: 2,
+    name: "密码登录",
+    isActive: false,
+  },
+]);
+const changeTab = (event) => {
+  tab.value.forEach((item) => {
+    if (item.index === event) {
+      item.isActive = true;
+    } else {
+      item.isActive = false;
+    }
+  });
+  console.log(event);
 };
 </script>
 
@@ -146,6 +138,8 @@ export default {
       .getTitle {
         font-size: 12px;
         color: var(--deepPink);
+        position: relative;
+        right: 10px;
       }
       button {
         width: 50%;
