@@ -5,7 +5,7 @@
  * @Autor: Austral
  * @Date: 2023-03-06 18:53:24
  * @LastEditors: Austral
- * @LastEditTime: 2023-03-14 19:18:42
+ * @LastEditTime: 2023-03-14 20:08:23
 -->
 <template>
   <div class="homePage">
@@ -69,12 +69,18 @@ const tabs = {
   width: 100%;
   height: 62px;
   padding: 0 20px;
+  min-width: 1100px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  img {
+    margin-left: -100px;
+  }
   ul {
     display: flex;
     height: 80%;
     font-size: 15px;
+    margin-left: -200px;
     color: var(--gray3);
     li {
       height: 70%;
@@ -90,7 +96,6 @@ const tabs = {
   .container {
     width: 300px;
     height: 60%;
-    margin-left: 100px;
     border-radius: 24px;
     background-color: var(--deepbg);
     input {
@@ -103,17 +108,16 @@ const tabs = {
   .users {
     width: 80px;
     height: 30px;
-    position: absolute;
-    left: 30prx;
-
+    display: flex;
+    align-content: center;
     .avatarInput {
       width: 30px;
       height: 30px;
       border-radius: 50%;
     }
     .name {
-      font-size: 16px;
-      line-height: 30px;
+      font-size: 16px;    
+      margin: 0 10px;
     }
   }
 }
