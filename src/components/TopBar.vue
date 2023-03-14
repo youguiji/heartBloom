@@ -5,7 +5,7 @@
  * @Autor: Austral
  * @Date: 2023-03-06 18:53:24
  * @LastEditors: Austral
- * @LastEditTime: 2023-03-14 18:45:06
+ * @LastEditTime: 2023-03-14 19:18:42
 -->
 <template>
   <div class="homePage">
@@ -57,23 +57,6 @@ const tabs = {
   心理文章: "Article",
   心理论坛: "Form",
 };
-// const tab = ref([
-//   {
-//     index: 0,
-//     title: "首页",
-//     isActive: true,
-//   },
-//   {
-//     index: 1,
-//     title: "心理文章",
-//     isActive: false,
-//   },
-//   {
-//     index: 0,
-//     title: "心理论坛",
-//     isActive: false,
-//   },
-// ]);
 </script>
 
 <style lang="scss">
@@ -120,8 +103,8 @@ const tabs = {
   .users {
     width: 80px;
     height: 30px;
-    position: relative;
-    right: 30prx;
+    position: absolute;
+    left: 30prx;
 
     .avatarInput {
       width: 30px;
@@ -130,7 +113,7 @@ const tabs = {
     }
     .name {
       font-size: 16px;
-      line-height: 100%;
+      line-height: 30px;
     }
   }
 }
